@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    /* box-sizing: border-box; */
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px #000;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+.toggle-btn {
+        width: 28px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 100%;
+}
+
+.logo {
+    height: 30px !important;
+    margin: -10px 30px 0;
+    width: fit-content !important;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+
+.search-bar {
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.search-btn {
+    width: 15%;
+    height: 112%;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0px;
+    border-left: none;
+    cursor: pointer;
+}
+
+.user-options {
+        height: 45px;
+    display: flex;
+    margin-left: 380px;
+    align-items: center;
+}
+
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.user-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sidebar */
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 100px;
+    width: 100px;
+    height: calc(100vh - 60px);
+    background: #fff;
+    padding-right: 10px;
+}
+
+.links{
+    display: block;
+    width: 70px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #242424;
+    font-size: 14px;
+    font-weight: 50px;
+    text-decoration: none;
+}
+.links svg{
+    height: 30px !important;
+    /* margin-right: 20px; */
+    width: 50% !important;
+}
+
+.links:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hr{
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0px;
+}
+
+.filters{
+    position: fixed;
+    left: 110px;
+    top: 60px;
+    width: calc(100% - 100px);
+    height: 60px;
+    background: #ffffff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    border-radius: 50px;
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    background: #f0f0f0;
+    border: 2px solid gray;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-options.active{
+    color: #fff;
+    background: #242424;
+}
+
+/* Video */
+
+.video-container{
+    width: calc(100% - 100px);
+    margin-top: 120px;
+    margin-left: 100px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+.video{
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 18px;
+}
+
+.title{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
+}
